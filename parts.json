@@ -1,0 +1,456 @@
+[
+  {
+    "name": "Light-Dependent Resistor (LDR)",
+    "image": "device-ldr.png",
+    "symbol": "symbol-ldr.png",
+    "description": [
+      "A light detector with wide dynamic range."
+    ],
+    "polarized": false,
+    "tags": ["light"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Photo transistor",
+    "image": "device-led.png",
+    "symbol": "symbol-phototransistor.png",
+    "description": [
+      "A light detector with a very fast response time. Often has a lens which makes them sensitive to direction."
+    ],
+    "polarized": true,
+    "tags": ["light", "fast"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "LED light sensor",
+    "image": "device-led.png",
+    "symbol": "symbol-led.png",
+    "description": [
+      "LEDs can work in reverse, generating a tiny amount of power when light shines onto them. Slow response time.",
+      "Red LEDs are best for detecting visible light."
+    ],
+    "polarized": true,
+    "tags": ["light", "weird"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Button",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electro-mechanical device providing physical on-off control.",
+      "Buttons can be momentary or latching types, and come in many forms such as push buttons, toggle switches, and bumper switches."
+    ],
+    "polarized": false,
+    "tags": ["movement", "touch"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Potentiometer (Pot)",
+    "image": null,
+    "symbol": "symbol-pot.png",
+    "description": [
+      "A variable resistor, usually with three terminals in a resistor-divider configuration providing direct control over an input level.",
+      "Pots come in many forms such as knobs, sliders, and trimer pots that require a small screwdriver for adjustment."
+    ],
+    "polarized": false,
+    "tags": ["touch"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Relay",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electro-mechanical device similar to a switch, but whose on/off control is the output of another circuit.",
+      "Relays allow a low-power circuit to switch a higher power circuit on and off."
+    ],
+    "polarized": false,
+    "tags": ["switch", "amplifier"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Gear motor",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "A motor connected through a gearbox to increase torque and slow down the output shaft to a manageable speed."
+    ],
+    "polarized": true,
+    "tags": ["movement"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Solenoid",
+    "image": "device-solenoid.jpg",
+    "symbol": null,
+    "description": [
+      "A linear actuator that can \"pull\" over a small distance."
+    ],
+    "polarized": false,
+    "tags": ["movement"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Dynamo",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "Electric motors can work in reverse, generating power when their shaft is turned."
+    ],
+    "polarized": true,
+    "tags": ["movement"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Fan",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electric motor whose shaft is connected directly to fan blades in order to move air."
+    ],
+    "polarized": true,
+    "tags": ["movement", "wind"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Heater",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electric heater is a resistor with a specific shape! Making heat requires a lot of power."
+    ],
+    "polarized": false,
+    "tags": ["heat"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Pump",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electro-mechanical device using a motor to move fluids."
+    ],
+    "polarized": true,
+    "tags": ["movement", "liquid"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Light Emitting Diode (LED)",
+    "image": "device-led.png",
+    "symbol": "symbol-led.png",
+    "description": [
+      "LEDs produce light efficiently, and respond very quickly to in the power applied."
+    ],
+    "polarized": true,
+    "tags": ["light", "fast"],
+    "type": "output",
+    "output": {
+      "circuit": "current-limit",
+      "current-limit": {
+        "typical": "8Ω"
+      }
+    }
+  },
+  {
+    "name": "Incandescent lightbulb",
+    "image": "device-lamp.jpg",
+    "symbol": "symbol-lamp.png",
+    "description": [
+      "Incandescent lightbulbs contain a fillament which gets so hot that it glows brightly. A non-reactive gas in the bulb prevents the fillament from burning up too quickly.",
+      "Their light output is slow to change, and waste most of their energy as heat"
+    ],
+    "tags": ["light", "heat"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Buzzer",
+    "image": "device-buzzer.jpg",
+    "symbol": "symbol-buzzer.png",
+    "description": [
+      "A noise-maker! No audio signal required, just apply power and it makes a very annoying tone all on its own."
+    ],
+    "polarized": true,
+    "tags": ["sound"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Speaker",
+    "image": "device-speaker.jpg",
+    "symbol": "symbol-speaker.png",
+    "description": [
+      "Speakers convert electrical energy into audible sound."
+    ],
+    "polarized": false,
+    "tags": ["sound"],
+    "type": "output",
+    "output": {
+      "circuit": "class-a",
+      "class-a": {}
+    }
+  },
+  {
+    "name": "Speaker as microphone",
+    "image": null,
+    "symbol": "symbol-speaker.png",
+    "description": [
+      "Speakers can work in reverse, generating power when the air vibrates.",
+      "Push-to-talk intercom systems often use a single speaker for both output and input."
+    ],
+    "polarized": false,
+    "tags": ["sound", "touch", "weird"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Impulse counter",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "An electro-mechanical device which increments the displayed number each time an electrical pulse is applied."
+    ],
+    "polarized": true,
+    "tags": ["display"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Vibrator",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "Vibrators are tiny motors with an off-centre weight attached to the shaft."
+    ],
+    "polarized": true,
+    "tags": ["movement"],
+    "type": "output",
+    "output": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Force-sensitive resistor (FSR)",
+    "image": null,
+    "symbol": "symbol-fsr.png",
+    "description": [
+      "A pressure-sensitive device kind of like an analog switch: its output varries with the force applied."
+    ],
+    "polarized": false,
+    "tags": ["movement", "touch"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Moisture sensor",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "Water in soil conducts electricity, so its moisture level can be approximated by measuring how much electricity can flow through it."
+    ],
+    "polarized": false,
+    "tags": ["liquid"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "100k"
+      }
+    }
+  },
+  {
+    "name": "Electret microphone",
+    "image": null,
+    "symbol": "symbol-electret.png",
+    "description": [
+      "A very small, sensitive, and low-cost type of microphone commonly used phones and headsets."
+    ],
+    "polarized": true,
+    "tags": ["sound"],
+    "type": "input",
+    "input": {
+      "circuit": "powered-divider",
+      "powered-divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Dynamic microphone",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "A speaker in reverse! Dynamic microphones turn vibrations in the air into electrical signals."
+    ],
+    "polarized": false,
+    "tags": ["sound"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Reed switch",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "A physical switch which is activated when near a magnet. Commonly used on windows and doors for alarm systems."
+    ],
+    "polarized": false,
+    "tags": ["magnetism"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Hall effect sensor",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "A magnetic field detector with very fast response time.",
+      "Common use-case: counting rotations of a motor shaft with a magnet attached."
+    ],
+    "polarized": true,
+    "tags": ["magnetism", "fast"],
+    "type": "input",
+    "input": {
+      "circuit": "powered-divider",
+      "powered-divider": {
+        "typical": "1k"
+      }
+    }
+  },
+  {
+    "name": "Thermistor",
+    "image": "device-thermistor.jpg",
+    "symbol": null,
+    "description": [
+      "A simple, low-accuracy temperature sensor with a wide working range."
+    ],
+    "polarized": false,
+    "tags": ["heat"],
+    "type": "input",
+    "input": {
+      "circuit": "divider",
+      "divider": {
+        "typical": "10k"
+      }
+    }
+  },
+  {
+    "name": "Coil",
+    "image": null,
+    "symbol": null,
+    "description": [
+      "A coil of wire can detect changing electromagnetic fields in the air"
+    ],
+    "polarized": false,
+    "tags": ["magnetism", "fast"],
+    "type": "input",
+    "input": {
+      "circuit": "direct",
+      "direct": {}
+    }
+  },
+  {
+    "name": "Voltage divider",
+    "image": "device-divider.jpg",
+    "symbol": "symbol-divider.png",
+    "description": [
+      "asdf",
+      "Note that the image has the divider in the inverted configuration – the sensor is on top, with a \"pull-down\" resistor on the bottom"
+    ],
+    "tags": [],
+    "type": "input-adapter",
+    "input-adapter": {}
+  },
+  {
+    "name": "Input decoupler",
+    "image": "device-decoupler.jpg",
+    "symbol": "symbol-decoupler.png",
+    "description": [
+      "asdf"
+    ],
+    "tags": ["audio"],
+    "type": "input-adapter",
+    "input-adapter": {}
+  }
+]
